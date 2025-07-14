@@ -1,0 +1,72 @@
+/* CSS Document */
+body {
+margin:0;
+padding:0;
+font-family:Verdana, Tahoma, Arial, ËÎÌו;
+font-size:13px;
+
+}
+div ul {
+list-style-image:url(../images/ul_li.jpg);	
+}
+#container {
+
+margin:auto;
+border-left:#67A21B solid 1px;
+border-right:#67A21B solid 1px;
+}
+#middle {
+background-color:#67A21B;
+
+}
+#left-column {
+width:150px;
+float:left;
+
+}
+#content {
+
+height:500px;
+float:left;
+padding-top:10px;
+border-left-width: 1px;
+border-left:1px #67A21B solid;
+}
+
+#footer {
+
+height:50px;
+clear:both;
+border-bottom:#67A21B solid 1px;
+border-top:#33CC66 solid 1px;
+margin:10px 0px 0px 0px;
+padding:5px 0px 5px 0px;
+text-align:center;
+}
+#footer p {
+font-size:12px;
+}
+
+.left-column-box {
+margin:10px 1px 8px 0px;
+padding:4px 4px 4px 4px;
+border:solid 1px #67A21B;
+}
+.left-column-box p {
+font-size:12px;
+}
+.left-column-title {
+display:block;
+margin:0px 0px 5px 0px;
+padding:0px 0px 2px 0px;
+cursor:pointer;
+}
+a:link,a:visited {
+	color: green;
+}
+a:hover {
+	color: blue;
+}
+a:active {
+	color: red;
+}

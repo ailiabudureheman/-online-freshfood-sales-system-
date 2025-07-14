@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<!-- 前台部分 -->
+	<listener>
+		<listener-class>com.mall.listener.UserLoginListener</listener-class>
+	</listener>	
+	<filter>
+		<filter-name>WordsFilter</filter-name>
+		<filter-class>com.mall.filter.WordsFilter</filter-class>
+		<init-param>
+			<param-name>filePath</param-name>
+			<param-value>/WEB-INF/word.txt</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>WordsFilter</filter-name>
+		<url-pattern>/checkLogin_Note</url-pattern>
+	</filter-mapping>	
+	<welcome-file-list>
+    	<welcome-file>getGoodsByTypeServlet</welcome-file>
+    </welcome-file-list>
+	
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.mall.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PageServlet</servlet-name>
+    <servlet-class>com.mall.servlet.PageServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.mall.servlet.RegisterServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>userManager</servlet-name>
+    <servlet-class>com.mall.servlet.UserManager</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowGoods</servlet-name>
+    <servlet-class>com.mall.servlet.ShowGoods</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowGoodsByIdServlet</servlet-name>
+    <servlet-class>com.mall.servlet.ShowGoodsByIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BuyGoodsServlet</servlet-name>
+    <servlet-class>com.mall.servlet.BuyGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteItemServlet</servlet-name>
+    <servlet-class>com.mall.servlet.DeleteItemServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateGoodsCount</servlet-name>
+    <servlet-class>com.mall.servlet.UpdateGoodsCount</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckLogin</servlet-name>
+    <servlet-class>com.mall.servlet.CheckLogin</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddOrderServlet</servlet-name>
+    <servlet-class>com.mall.servlet.AddOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>com.mall.servlet.IndexServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowAllGoodsByType</servlet-name>
+    <servlet-class>com.mall.servlet.ShowAllGoodsByType</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SearchServlet</servlet-name>
+    <servlet-class>com.mall.servlet.SearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PageSearchServlet</servlet-name>
+    <servlet-class>com.mall.servlet.PageSearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowNoteServlet</servlet-name>
+    <servlet-class>com.mall.servlet.ShowNoteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PageNoteServlet</servlet-name>
+    <servlet-class>com.mall.servlet.PageNoteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddNoteServlet</servlet-name>
+    <servlet-class>com.mall.servlet.AddNoteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckLogin_Note</servlet-name>
+    <servlet-class>com.mall.servlet.CheckLogin_Note</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckNameExist</servlet-name>
+    <servlet-class>com.mall.servlet.CheckNameExist</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RandomCodeServlet</servlet-name>
+    <servlet-class>com.mall.servlet.RandomCodeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckRandomCode</servlet-name>
+    <servlet-class>com.mall.servlet.CheckRandomCode</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowSuperTypeServlet</servlet-name>
+    <servlet-class>com.mall.servlet.ShowSuperTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowSubTypeServlet</servlet-name>
+    <servlet-class>com.mall.servlet.ShowSubTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindUser</servlet-name>
+    <servlet-class>com.mall.servlet.FindUser</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindAnswer</servlet-name>
+    <servlet-class>com.mall.servlet.FindAnswer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdataPwd</servlet-name>
+    <servlet-class>com.mall.servlet.UpdataPwd</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>DetailSearch</servlet-name>
+    <servlet-class>com.mall.servlet.DetailSearch</servlet-class>
+  </servlet>
+
+
+
+  <servlet>
+    <servlet-name>deleteWarehouseServlet</servlet-name>
+    <servlet-class>com.mall.servlet.DeleteWarehouseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteWarehouseServlet</servlet-name>
+    <url-pattern>/deleteWarehouseServlet</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>addWarehouseServlet</servlet-name>
+    <servlet-class>com.mall.servlet.AddWarehouseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addWarehouseServlet</servlet-name>
+    <url-pattern>/addWarehouseServlet</url-pattern>
+  </servlet-mapping>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageServlet</servlet-name>
+    <url-pattern>/page</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>userManager</servlet-name>
+    <url-pattern>/userManager</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowGoods</servlet-name>
+    <url-pattern>/showGoods</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowGoodsByIdServlet</servlet-name>
+    <url-pattern>/showGoodsByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BuyGoodsServlet</servlet-name>
+    <url-pattern>/buyGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteItemServlet</servlet-name>
+    <url-pattern>/deleteItemServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateGoodsCount</servlet-name>
+    <url-pattern>/updateGoodsCount</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckLogin</servlet-name>
+    <url-pattern>/checkLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddOrderServlet</servlet-name>
+    <url-pattern>/addOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/index</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowAllGoodsByType</servlet-name>
+    <url-pattern>/showAllGoodsByType</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchServlet</servlet-name>
+    <url-pattern>/searchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageSearchServlet</servlet-name>
+    <url-pattern>/pageSearchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowNoteServlet</servlet-name>
+    <url-pattern>/showNoteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageNoteServlet</servlet-name>
+    <url-pattern>/pageNoteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddNoteServlet</servlet-name>
+    <url-pattern>/addNoteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckLogin_Note</servlet-name>
+    <url-pattern>/checkLogin_Note</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckNameExist</servlet-name>
+    <url-pattern>/checkNameExist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RandomCodeServlet</servlet-name>
+    <url-pattern>/code</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckRandomCode</servlet-name>
+    <url-pattern>/checkRandomCode</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>ShowSuperTypeServlet</servlet-name>
+    <url-pattern>/showSuperTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowSubTypeServlet</servlet-name>
+    <url-pattern>/showSubTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindUser</servlet-name>
+    <url-pattern>/findUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindAnswer</servlet-name>
+    <url-pattern>/findAnswer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdataPwd</servlet-name>
+    <url-pattern>/updataPwd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DetailSearch</servlet-name>
+    <url-pattern>/detailSearch</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <!-- 后台部分 -->
+   <listener>
+		<listener-class>com.mall.listener.AdminLoginListener</listener-class>
+	</listener>
+	<filter>
+		<filter-name>code</filter-name>
+		<filter-class>com.mall.filter.UnicodeFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>code</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>adminlogin</filter-name>
+		<filter-class>com.mall.filter.AdminLoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>adminlogin</filter-name>
+		<url-pattern>/Admin/pages/*</url-pattern>
+	</filter-mapping>
+	
+  <servlet>
+    <servlet-name>GetAllUserServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetAllUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetSubTypeBySuperTypeId</servlet-name>
+    <servlet-class>com.mall.servlet.GetSubTypeBySuperTypeId</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetSuperType</servlet-name>
+    <servlet-class>com.mall.servlet.GetSuperType</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetAdminType</servlet-name>
+    <servlet-class>com.mall.servlet.GetAdminType</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteUserServlet</servlet-name>
+    <servlet-class>com.mall.servlet.DeleteUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetAllGoodsServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetAllGoodsServlet</servlet-class>
+  </servlet>
+    <servlet>
+    <servlet-name>GetGoodsByTypeServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetGoodsByTypeServlet</servlet-class>
+  </servlet>
+      <servlet>
+    <servlet-name>UpdateGoodsServlet</servlet-name>
+    <servlet-class>com.mall.servlet.UpdateGoodsServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GetAllNotesServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetAllNotesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddGoodsServlet</servlet-name>
+    <servlet-class>com.mall.servlet.AddGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckGoodsNameIsExist</servlet-name>
+    <servlet-class>com.mall.servlet.CheckGoodsNameIsExist</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckISBNIsExist</servlet-name>
+    <servlet-class>com.mall.servlet.CheckISBNIsExist</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetOneUserServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetOneUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetOneAdminServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetOneAdminServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <servlet-class>com.mall.servlet.AdminLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetUserPagerServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetUserPagerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetAdminPagerServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetAdminPagerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddSuperTypeServlet</servlet-name>
+    <servlet-class>com.mall.servlet.AddSuperTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddSubTypeServlet</servlet-name>
+    <servlet-class>com.mall.servlet.AddSubTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddInformServlet</servlet-name>
+    <servlet-class>com.mall.servlet.AddInformServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetAllInformServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetAllInformServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteInformServlet</servlet-name>
+    <servlet-class>com.mall.servlet.DeleteInformServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>DeleteAdminsServlet</servlet-name>
+    <servlet-class>com.mall.servlet.DeleteAdminsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateInformServlet</servlet-name>
+    <servlet-class>com.mall.servlet.UpdateInformServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetOneInformServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetOneInformServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetAllOrderServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetAllOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetOneOrderServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetOneOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetNotSendOrderServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetNotSendOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetSendOrderServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetSendOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminSendOrderServlet</servlet-name>
+    <servlet-class>com.mall.servlet.AdminSendOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetGoodsByGoodsNameServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetGoodsByGoodsNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetAllGoodsNameServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetAllGoodsNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteNoteServlet</servlet-name>
+    <servlet-class>com.mall.servlet.DeleteNoteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetInformPagerServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetInformPagerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetNotePagerServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetNotePagerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetOrderPagerServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetOrderPagerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetOrderSendPagerServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetOrderSendPagerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteOrderServlet</servlet-name>
+    <servlet-class>com.mall.servlet.DeleteOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetNotSendOrderPagerServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetNotSendOrderPagerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetOrderNotSendPagerServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetOrderNotSendPagerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetOrderFreezePagerServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetOrderFreezePagerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteFreezeOrderServlet</servlet-name>
+    <servlet-class>com.mall.servlet.DeleteFreezeOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FreezeOrderServlet</servlet-name>
+    <servlet-class>com.mall.servlet.FreezeOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetGoodsPagerServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetGoodsPagerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteGoodsServlet</servlet-name>
+    <servlet-class>com.mall.servlet.DeleteGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminUpdatePassword</servlet-name>
+    <servlet-class>com.mall.servlet.AdminUpdatePassword</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminLogout</servlet-name>
+    <servlet-class>com.mall.servlet.AdminLogout</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckSuperTypeIsExist</servlet-name>
+    <servlet-class>com.mall.servlet.CheckSuperTypeIsExist</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckSubTypeIsExist</servlet-name>
+    <servlet-class>com.mall.servlet.CheckSubTypeIsExist</servlet-class>
+  </servlet>
+    <servlet>
+    <servlet-name>CheckLoginNameIsExist</servlet-name>
+    <servlet-class>com.mall.servlet.CheckLoginNameIsExist</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserLoginOut</servlet-name>
+    <servlet-class>com.mall.servlet.UserLoginOut</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateAdminServlet</servlet-name>
+    <servlet-class>com.mall.servlet.UpdateAdminServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>UpdateGoodServlet</servlet-name>
+    <servlet-class>com.mall.servlet.UpdateGoodServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+  <servlet>
+    <servlet-name>GetInventorySummaryServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetInventorySummaryServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GetWarehouseListServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetWarehouseListServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GetInventoryAlertServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetInventoryAlertServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GetSalesOrderRequestServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetSalesOrderRequestServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GetMaterialOrderServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetMaterialOrderServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GetDailyArrivalServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetDailyArrivalServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>InventorySettingsServlet</servlet-name>
+    <servlet-class>com.mall.servlet.InventorySettingsServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>GetInventorySummaryServlet</servlet-name>
+    <url-pattern>/getInventorySummaryServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GetWarehouseListServlet</servlet-name>
+    <url-pattern>/getWarehouseListServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GetInventoryAlertServlet</servlet-name>
+    <url-pattern>/getInventoryAlertServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GetSalesOrderRequestServlet</servlet-name>
+    <url-pattern>/getSalesOrderRequestServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GetMaterialOrderServlet</servlet-name>
+    <url-pattern>/getMaterialOrderServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GetDailyArrivalServlet</servlet-name>
+    <url-pattern>/getDailyArrivalServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>InventorySettingsServlet</servlet-name>
+    <url-pattern>/inventorySettingsServlet</url-pattern>
+  </servlet-mapping>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>UpdateAdminServlet</servlet-name>
+    <url-pattern>/updateAdminServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateGoodsServlet</servlet-name>
+    <url-pattern>/updateGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetAllUserServlet</servlet-name>
+    <url-pattern>/getAllUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetSubTypeBySuperTypeId</servlet-name>
+    <url-pattern>/getSubTypeBySuperTypeId</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetSuperType</servlet-name>
+    <url-pattern>/getSuperType</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>GetAdminType</servlet-name>
+    <url-pattern>/getAdminType</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteUserServlet</servlet-name>
+    <url-pattern>/deleteUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetAllGoodsServlet</servlet-name>
+    <url-pattern>/getAllGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetGoodsByTypeServlet</servlet-name>
+    <url-pattern>/getGoodsByTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetAllNotesServlet</servlet-name>
+    <url-pattern>/getAllNotesServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddGoodsServlet</servlet-name>
+    <url-pattern>/addGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckGoodsNameIsExist</servlet-name>
+    <url-pattern>/checkGoodsNameIsExist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckISBNIsExist</servlet-name>
+    <url-pattern>/checkISBNIsExist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetOneUserServlet</servlet-name>
+    <url-pattern>/getOneUserServlet</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>GetOneAdminServlet</servlet-name>
+    <url-pattern>/getOneAdminServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <url-pattern>/adminLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetUserPagerServlet</servlet-name>
+    <url-pattern>/getUserPagerServlet</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>GetAdminPagerServlet</servlet-name>
+    <url-pattern>/getAdminPagerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddSuperTypeServlet</servlet-name>
+    <url-pattern>/addSuperTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddSubTypeServlet</servlet-name>
+    <url-pattern>/addSubTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddInformServlet</servlet-name>
+    <url-pattern>/addInformServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetAllInformServlet</servlet-name>
+    <url-pattern>/getAllInformServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteInformServlet</servlet-name>
+    <url-pattern>/deleteInform</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>DeleteAdminsServlet</servlet-name>
+    <url-pattern>/deleteAdmin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateInformServlet</servlet-name>
+    <url-pattern>/updateInformServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetOneInformServlet</servlet-name>
+    <url-pattern>/getOneInformServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetAllOrderServlet</servlet-name>
+    <url-pattern>/getAllOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetOneOrderServlet</servlet-name>
+    <url-pattern>/getOneOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetNotSendOrderServlet</servlet-name>
+    <url-pattern>/getNotSendOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetSendOrderServlet</servlet-name>
+    <url-pattern>/getSendOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminSendOrderServlet</servlet-name>
+    <url-pattern>/adminSendOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetGoodsByGoodsNameServlet</servlet-name>
+    <url-pattern>/getGoodsByGoodsNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetAllGoodsNameServlet</servlet-name>
+    <url-pattern>/getAllGoodsNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteNoteServlet</servlet-name>
+    <url-pattern>/deleteNote</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetInformPagerServlet</servlet-name>
+    <url-pattern>/getInformPagerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetNotePagerServlet</servlet-name>
+    <url-pattern>/getNotePagerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetOrderPagerServlet</servlet-name>
+    <url-pattern>/getOrderPagerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetOrderSendPagerServlet</servlet-name>
+    <url-pattern>/getOrderSendPagerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteOrderServlet</servlet-name>
+    <url-pattern>/deleteOrder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetNotSendOrderPagerServlet</servlet-name>
+    <url-pattern>/getNotSendOrderPagerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetOrderNotSendPagerServlet</servlet-name>
+    <url-pattern>/getOrderNotSendPagerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetOrderFreezePagerServlet</servlet-name>
+    <url-pattern>/getOrderFreezePagerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteFreezeOrderServlet</servlet-name>
+    <url-pattern>/deleteFreezeOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FreezeOrderServlet</servlet-name>
+    <url-pattern>/freezeOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetGoodsPagerServlet</servlet-name>
+    <url-pattern>/getGoodsPagerServlet</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>UpdateGoodServlet</servlet-name>
+    <url-pattern>/updateGoodServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteGoodsServlet</servlet-name>
+    <url-pattern>/deleteGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminUpdatePassword</servlet-name>
+    <url-pattern>/adminUpdatePassword</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLogout</servlet-name>
+    <url-pattern>/adminLogout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckSuperTypeIsExist</servlet-name>
+    <url-pattern>/checkSuperTypeIsExist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckSubTypeIsExist</servlet-name>
+    <url-pattern>/checkSubTypeIsExist</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>CheckLoginNameIsExist</servlet-name>
+    <url-pattern>/checkLoginNameIsExist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserLoginOut</servlet-name>
+    <url-pattern>/userLoginOut</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- djm -->
+  <servlet>
+    <servlet-name>AllowAddSuperServlet</servlet-name>
+    <servlet-class>com.mall.servlet.AllowAddSuperServlet</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>AllowAddSuperServlet</servlet-name>
+    <url-pattern>/allowAddSuperServlet</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>AllowAddSubServlet</servlet-name>
+    <servlet-class>com.mall.servlet.AllowAddSubServlet</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>AllowAddSubServlet</servlet-name>
+    <url-pattern>/allowAddSubServlet</url-pattern>
+  </servlet-mapping>
+      <servlet>
+    <servlet-name>AllowAddGoodsServlet</servlet-name>
+    <servlet-class>com.mall.servlet.AllowAddGoodsServlet</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>AllowAddGoodsServlet</servlet-name>
+    <url-pattern>/allowAddGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AllowAddAdminServlet</servlet-name>
+    <servlet-class>com.mall.servlet.AllowAddAdminServlet</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>AllowAddAdminServlet</servlet-name>
+    <url-pattern>/allowAddAdminServlet</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>AddAdminServlet</servlet-name>
+    <servlet-class>com.mall.servlet.AddAdminServlet</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>AddAdminServlet</servlet-name>
+    <url-pattern>/addAdminServlet</url-pattern>
+  </servlet-mapping>
+  <!-- djm -->
+  <servlet>
+    <servlet-name>OneUserManameServlet</servlet-name>
+    <servlet-class>com.mall.servlet.OneUserManameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdatePassword</servlet-name>
+    <servlet-class>com.mall.servlet.UpdatePassword</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateUserAll</servlet-name>
+    <servlet-class>com.mall.servlet.UpdateUserAll</servlet-class>
+  </servlet>
+<servlet>
+<servlet-name>src</servlet-name>
+<servlet-class>com.mall.common.RandomCodeServlet</servlet-class>
+</servlet>
+  <servlet>
+    <servlet-name>UpdateUserTrue</servlet-name>
+    <servlet-class>com.mall.servlet.UpdateUserTrue</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckCode</servlet-name>
+    <servlet-class>com.mall.servlet.CheckCode</servlet-class>
+  </servlet>
+  <servlet>
+
+    <servlet-name>SelectOrder</servlet-name>
+    <servlet-class>com.mall.servlet.SelectOrder</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SonOrder</servlet-name>
+    <servlet-class>com.mall.servlet.SonOrder</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>OneUserManameServlet</servlet-name>
+    <url-pattern>/okLoggin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdatePassword</servlet-name>
+    <url-pattern>/newPassword</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateUserAll</servlet-name>
+    <url-pattern>/updateUserAll</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>src</servlet-name>
+    <url-pattern>/src</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateUserTrue</servlet-name>
+    <url-pattern>/updateUserTwo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckCode</servlet-name>
+    <url-pattern>/checkcode</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectOrder</servlet-name>
+    <url-pattern>/selectOrder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SonOrder</servlet-name>
+    <url-pattern>/son</url-pattern>
+  </servlet-mapping>
+
+
+
+
+  <servlet>
+    <servlet-name>HandleInventoryAlertServlet</servlet-name>
+    <servlet-class>com.mall.servlet.HandleInventoryAlertServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HandleInventoryAlertServlet</servlet-name>
+    <url-pattern>/handleInventoryAlertServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>GetInventoryAlertDetailServlet</servlet-name>
+    <servlet-class>com.mall.servlet.GetInventoryAlertDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetInventoryAlertDetailServlet</servlet-name>
+    <url-pattern>/getInventoryAlertDetailServlet</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>CreateMaterialOrderServlet</servlet-name>
+    <servlet-class>com.mall.servlet.CreateMaterialOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateMaterialOrderServlet</servlet-name>
+    <url-pattern>/createMaterialOrderServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SaveMaterialOrderServlet</servlet-name>
+    <servlet-class>com.mall.servlet.SaveMaterialOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SaveMaterialOrderServlet</servlet-name>
+    <url-pattern>/saveMaterialOrderServlet</url-pattern>
+  </servlet-mapping>
+
+
+
+
+
+
+
+
+</web-app>
