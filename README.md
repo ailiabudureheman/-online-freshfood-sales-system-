@@ -81,6 +81,9 @@ online fresh food sales system 是一个客户端和后台功能齐全的在线�
 
 其中 admin4 的权限最大，建议使用该账号，以获得更好的体验。
 
+登录入口：
+<img width="1605" height="957" alt="image" src="https://github.com/user-attachments/assets/d7fb8ee7-fa39-4e74-a963-78702c2c6c45" />
+
 
 
 ## 核心功能说明
