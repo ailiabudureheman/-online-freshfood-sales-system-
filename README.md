@@ -60,6 +60,8 @@ online fresh food sales system 是一个客户端和后台功能齐全的在线�
    - 访问地址：`http://localhost:8080/shop`
 
 3. **初始账户**
+
+   
 +----+-----------+------------+-----------+----------+
 | ID | AdminType | AdminName  | LoginName | LoginPwd |
 +----+-----------+------------+-----------+----------+
@@ -69,6 +71,8 @@ online fresh food sales system 是一个客户端和后台功能齐全的在线�
 |  4 |         4 | 系统管理员 | admin4    | admin4   |
 
 其中 admin4 的权限最大，建议使用该账号，以获得更好的体验。
+
+
 
 ## 核心功能说明
 ### 商品添加流程
