@@ -132,18 +132,5 @@ online fresh food sales system 是一个客户端和后台功能齐全的在线�
    - 所有用户输入必须经过验证
    - 数据库操作使用PreparedStatement防止SQL注入
    - 敏感操作需验证用户权限
+     
 
-## 版本历史
-- v1.0.0：基础功能实现（商品管理、库存管理）
-- v1.1.0：添加订单处理模块
-- v1.2.0：优化前端界面，添加响应式设计
-- v1.3.0：完善库存预警和报表功能
-
-## 联系方式
-- 开发团队：技术研发部
-- 联系邮箱：support@example.com
-- 问题反馈：https://github.com/your-org/shop-management/issues
-
----
-
-© 2025 商品管理系统 版权所有
