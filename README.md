@@ -1,4 +1,11 @@
 online fresh food sales system 是一个客户端和后台功能齐全的在线生鲜销售及管理的项目。
+页面如下：
+客户端购物页面：
+<img width="1896" height="1401" alt="image" src="https://github.com/user-attachments/assets/3b52d67c-97f2-4961-b286-320b9d3c4c26" />
+后台管理页面：
+<img width="2548" height="1411" alt="image" src="https://github.com/user-attachments/assets/edb11efa-6c6f-476a-a41c-9426a07cbc8a" />
+<img width="2548" height="1411" alt="image" src="https://github.com/user-attachments/assets/bb4c4330-306a-4d9a-aa01-2db5778a9857" />
+
 ## 商品管理系统 - 项目说明文档
 
 ## 项目简介
@@ -60,6 +67,9 @@ online fresh food sales system 是一个客户端和后台功能齐全的在线�
    - 访问地址：`http://localhost:8080/shop`
 
 3. **初始账户**
+客户端账户：
+ID：aabbcc password:a11223344
+后台管理员账户
  ID | AdminType | AdminName  | LoginName | LoginPwd |
 
 +----+-----------+------------+-----------+----------+
