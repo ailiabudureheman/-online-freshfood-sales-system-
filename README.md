@@ -1,3 +1,4 @@
+简介
 online fresh food sales system 是一个客户端和后台功能齐全的在线生鲜销售及管理的项目。
 页面如下：
 客户端购物页面：
